@@ -30,6 +30,12 @@ public class MusicalInstrumentServiceImpl implements MusicalInstrumentService {
     public List<MusicalInstrumentModel> getAll() {
         return repository.getAll();
     }
+
+    @Override
+    public List<MusicalInstrumentModel> getAll(Integer pageNo, Integer pageSize, String sortBy,String sortDirection) {
+        return repository.getAll(pageNo,pageSize,sortBy,sortDirection);
+    }
+
     @Override
     public void delete(String id) {
         repository.delete(id);

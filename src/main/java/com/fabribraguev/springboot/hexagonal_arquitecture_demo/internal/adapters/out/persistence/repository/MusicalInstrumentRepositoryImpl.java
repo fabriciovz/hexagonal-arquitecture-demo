@@ -5,6 +5,9 @@ import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.ports.out.MusicalInstrumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
@@ -30,6 +33,13 @@ public class MusicalInstrumentRepositoryImpl implements MusicalInstrumentReposit
     public List<MusicalInstrumentModel> getAll() {
         return musicalInstrumentCrudRepository.findAll().stream().map(musicalInstrumentEntityMapper::toModel).collect(Collectors.toList());
     }
+
+    @Override
+    public List<MusicalInstrumentModel> getAll(Integer pageNo, Integer pageSize, String sortBy,String sortDirection) {
+        Pageable paging = PageRequest.of(pageNo, pageSize, Sort.by(Sort.Direction.fromString(sortDirection),sortBy));
+        return musicalInstrumentCrudRepository.findAll(paging).stream().map(musicalInstrumentEntityMapper::toModel).collect(Collectors.toList());
+    }
+
     @Override
     public void delete(String id) {
         Optional<MusicalInstrumentEntity> musicalInstrumentEntity = musicalInstrumentCrudRepository.findById(id);

@@ -24,10 +24,22 @@ public class MusicalInstrumentController {
         Optional<MusicalInstrumentModel> musicalInstrument = musicalInstrumentService.getById(id);
         return new ResponseEntity<>(musicalInstrumentDtoMapper.toDto(musicalInstrument.get()), HttpStatus.OK);
     }
-    @GetMapping
+    @GetMapping("/all")
     public ResponseEntity<List<MusicalInstrumentDTO>> getAll(){
         return new ResponseEntity<>(musicalInstrumentService.
                 getAll().
+                stream().
+                map(musicalInstrumentDtoMapper::toDto).
+                collect(Collectors.toList()),HttpStatus.OK);
+    }
+    @GetMapping
+    public ResponseEntity<List<MusicalInstrumentDTO>> getAll(
+            @RequestParam(defaultValue = "0") Integer pageNo,
+            @RequestParam(defaultValue = "10") Integer pageSize,
+            @RequestParam(defaultValue = "name") String sortBy,
+            @RequestParam(defaultValue = "ASC") String sortDirection){
+        return new ResponseEntity<>(musicalInstrumentService.
+                getAll(pageNo, pageSize, sortBy,sortDirection).
                 stream().
                 map(musicalInstrumentDtoMapper::toDto).
                 collect(Collectors.toList()),HttpStatus.OK);
