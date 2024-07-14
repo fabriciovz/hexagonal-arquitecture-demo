@@ -1,11 +1,9 @@
 package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.out.persistence.entity;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;

@@ -2,19 +2,7 @@ package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapter
 
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.in.rest.dto.MusicalInstrumentDTO;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
-import org.mapstruct.InjectionStrategy;
-import org.mapstruct.Mapper;
-import org.mapstruct.factory.Mappers;
 import org.springframework.stereotype.Component;
-
-/*@Mapper(componentModel = "spring")
-public interface MusicalInstrumentDtoMapper {
-    //MusicalInstrumentDtoMapper INSTANCE = Mappers.getMapper( MusicalInstrumentDtoMapper.class );
-
-    MusicalInstrumentDTO toDto(MusicalInstrumentModel model);
-    MusicalInstrumentModel toModel(MusicalInstrumentDTO dto);
-}*/
-// old way to write a mapper :)
 @Component
 public class MusicalInstrumentDtoMapper {
     public MusicalInstrumentDTO toDto(MusicalInstrumentModel model) {
@@ -36,3 +24,11 @@ public class MusicalInstrumentDtoMapper {
                 build();
     }
 }
+/*@Mapper(componentModel = "spring")
+public interface MusicalInstrumentDtoMapper {
+    //MusicalInstrumentDtoMapper INSTANCE = Mappers.getMapper( MusicalInstrumentDtoMapper.class );
+
+    MusicalInstrumentDTO toDto(MusicalInstrumentModel model);
+    MusicalInstrumentModel toModel(MusicalInstrumentDTO dto);
+}*/
+// old way to write a mapper :)
