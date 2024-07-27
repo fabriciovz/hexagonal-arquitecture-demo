@@ -1,6 +1,6 @@
 package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.ports.in;
 
-import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
+import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain.MusicalInstrumentModel;
 import java.util.List;
 import java.util.Optional;
 

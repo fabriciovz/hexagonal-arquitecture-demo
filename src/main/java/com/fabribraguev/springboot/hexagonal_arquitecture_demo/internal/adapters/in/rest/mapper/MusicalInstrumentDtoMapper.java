@@ -1,7 +1,7 @@
 package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.in.rest.mapper;
 
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.in.rest.dto.MusicalInstrumentDTO;
-import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
+import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain.MusicalInstrumentModel;
 import org.springframework.stereotype.Component;
 @Component
 public class MusicalInstrumentDtoMapper {

@@ -1,6 +1,6 @@
-package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.services;
+package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.services;
 
-import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
+import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain.MusicalInstrumentModel;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.ports.in.MusicalInstrumentService;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.ports.out.MusicalInstrumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;

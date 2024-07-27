@@ -1,7 +1,7 @@
 package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.out.persistence.mapper;
 
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.out.persistence.entity.MusicalInstrumentEntity;
-import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
+import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain.MusicalInstrumentModel;
 import org.springframework.stereotype.Component;
 
 @Component

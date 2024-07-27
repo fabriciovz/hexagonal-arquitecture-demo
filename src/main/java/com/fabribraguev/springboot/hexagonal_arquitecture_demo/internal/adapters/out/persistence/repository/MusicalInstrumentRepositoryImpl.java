@@ -2,7 +2,7 @@ package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapter
 
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.out.persistence.entity.MusicalInstrumentEntity;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.adapters.out.persistence.mapper.MusicalInstrumentEntityMapper;
-import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain.MusicalInstrumentModel;
+import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain.MusicalInstrumentModel;
 import com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.ports.out.MusicalInstrumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;

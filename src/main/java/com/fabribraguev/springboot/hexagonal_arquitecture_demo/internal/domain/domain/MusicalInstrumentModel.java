@@ -1,4 +1,4 @@
-package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.core.domain;
+package com.fabribraguev.springboot.hexagonal_arquitecture_demo.internal.domain.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
